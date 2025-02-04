@@ -1,0 +1,49 @@
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: clamp(0.8rem, 2vw, 1.5rem);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.date {
+  font-weight: bold;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+}
+
+.icon {
+  width: clamp(40px, 8vw, 60px);
+  height: clamp(40px, 8vw, 60px);
+  margin: 0.5rem auto;
+}
+
+.temp {
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-weight: bold;
+}
+
+.condition {
+  color: #666;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+.details {
+  border-top: 1px solid #eee;
+  padding-top: 0.8rem;
+  margin-top: 0.8rem;
+  font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+  color: #666;
+  display: grid;
+  gap: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 0.8rem;
+  }
+} 

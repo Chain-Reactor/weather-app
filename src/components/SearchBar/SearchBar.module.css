@@ -1,0 +1,68 @@
+.searchBar {
+  display: flex;
+  gap: clamp(0.5rem, 2vw, 1rem);
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.coordinatesContainer {
+  display: flex;
+  flex: 1;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.radioContainer {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  min-width: 120px;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 480px) {
+  .searchBar {
+    flex-direction: column;
+  }
+
+  .coordinatesContainer {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+} 
