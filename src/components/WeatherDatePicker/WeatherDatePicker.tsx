@@ -56,15 +56,15 @@ export const WeatherDatePicker = ({ data }: WeatherDatePickerProps) => {
     return hourlyForecast.map((hour, index) => (
       index % 3 === 0 && (
         <div key={hour.time} className={styles.hourlyItem}>
-          <div className={styles.hourTime}>
+          <div>
             {new Date(hour.time).getHours()}:00
           </div>
           <img 
             src={hour.condition.icon} 
             alt={hour.condition.text}
-            className={styles.hourIcon}
+            className={hour.condition.icon}
           />
-          <div className={styles.hourTemp}>
+          <div>
             {Math.round(hour.temp_c)}°C
           </div>
         </div>
@@ -133,7 +133,7 @@ export const WeatherDatePicker = ({ data }: WeatherDatePickerProps) => {
             </div>
           </div>
 
-          <div className={styles.hourlyForecast}>
+          <div className={styles.hourlyGrid}>
             {renderHourlyForecast(selectedDayWeather.hourlyForecast)}
           </div>
         </div>

@@ -43,7 +43,7 @@ export const TodayForecast = ({ data }: todayForecastProps) => {
           </div>
         </div>
         
-        <div className={styles.hourlyForecast}>
+        <div className={styles.hourlyGrid}>
           {today.hour.map((hour, index) => (
             index % 3 === 0 && (
               <div key={hour.time} className={styles.hourlyItem}>
