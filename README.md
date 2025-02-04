@@ -1,50 +1,78 @@
-# React + TypeScript + Vite
+# Frontend Engineer Coding Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Summary
 
-Currently, two official plugins are available:
+This project is a **Single Page Application (SPA)** built with **React, TypeScript, and Vite**, designed to display weather information based on user-inputted locations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Features
 
-## Expanding the ESLint configuration
+- Fetches weather data using the [Weather API](https://www.weatherapi.com/).
+- Displays **weekly weather forecasts** on the main page.
+- Provides **detailed weather information** for a selected date on a secondary page.
+- Allows users to input a **city name** or **latitude/longitude** to search for weather data.
+- Features a **responsive UI** for both PC and mobile.
+- Implements **ESLint & Prettier** for linting and formatting.
+- Utilizes **TypeScript** for type safety.
+- Includes **unit and integration tests** for reliability.
+- Deployable to **Netlify, GitHub Pages, Firebase Hosting, or Vercel**.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Tech Stack
 
-- Configure the top-level `parserOptions` property like this:
+- **React (with Vite)**
+- TypeScript
+- ESLint & Prettier for code formatting
+- API integration with WeatherAPI
+- GitHub for version control
+- Hosting on **Vercel**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Project Repository
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- GitHub URL: [Weather App](https://github.com/chain-reactor/weather-app.git)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Installation & Setup
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/chain-reactor/weather-app.git
+   cd weather-app
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Create an `.env` file and add your **WeatherAPI Key**:
+   ```sh
+   VITE_WEATHER_API_KEY=your_api_key_here
+   ```
+4. Start the development server:
+   ```sh
+   npm run dev
+   ```
+5. Run tests:
+   ```sh
+   npm test
+   ```
+
+### Deployment
+
+1. Build the project for production:
+   ```sh
+   npm run build
+   ```
+2. Deploy using **Netlify, GitHub Pages, Firebase Hosting, or Vercel**.
+
+
+## Notes
+
+- Follow **best practices** for clean code and component structure.
+- Ensure **proper error handling** for API requests.
+- Commit frequently with **clear messages**.
+- Consider **performance optimizations** for API calls and UI rendering.
+
+---
+
+## Author
+Developed by **Chain-reactor**
+
+Happy coding! 🚀
+
